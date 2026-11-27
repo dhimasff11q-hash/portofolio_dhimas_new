@@ -54,7 +54,7 @@ export default function About() {
                 {/* 🖼️ LAYER 2: Gambar Profil (Ukuran BISA DIPERBESAR sendiri) */}
                 <div className="relative w-150 h-150 z-10">
                   <img 
-                    src="public/works/7.png" 
+                    src="src/assets/7.png" 
                     alt="Dhimas"
                     className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-ink" 
                   />
