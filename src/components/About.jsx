@@ -40,14 +40,28 @@ export default function About() {
           </div>
 
           {/* FOTO */}
-          <div className="flex justify-center items-center">
-            <div className="relative w-64 h-64">
-              <div className="absolute w-40 h-40 bg-brand rounded-full -left-4 top-8 animate-float" />
-              <div className="absolute w-40 h-40 bg-paper rounded-full -right-2 bottom-4 animate-float-slow" />
-              <img src="/profile.jpg" alt="Lucian"   /* ← ganti foto di public/profile.jpg */
-                className="relative w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-ink" />
-            </div>
-          </div>
+          {/* FOTO PROFIL (2 LAYER TERPISAH) */}
+            <div className="flex justify-center items-center">
+              {/* Wadah utama (cukup besar untuk menampung gambar yang diperbesar) */}
+              <div className="relative w-80 h-80 flex justify-center items-center">
+
+                {/* 🟡 LAYER 1: Lingkaran Dekoratif (Ukuran TETAP, tidak akan berubah) */}
+                <div className="absolute w-64 h-64">
+                  <div className="absolute w-40 h-40 bg-brand rounded-full -left-4 top-8 animate-float" />
+                  <div className="absolute w-40 h-40 bg-paper rounded-full -right-2 bottom-4 animate-float-slow" />
+                </div>
+
+                {/* 🖼️ LAYER 2: Gambar Profil (Ukuran BISA DIPERBESAR sendiri) */}
+                <div className="relative w-150 h-150 z-10">
+                  <img 
+                    src="public/works/7.png" 
+                    alt="Dhimas"
+                    className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-ink" 
+                  />
+    </div>
+
+  </div>
+</div>
         </div>
       </Timeline>
     </section>
